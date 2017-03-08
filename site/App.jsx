@@ -14,9 +14,6 @@ export default class App extends Component {
         return (
             <div style={{maxWidth: 600, margin: "0 auto"}}>
                 <Card>
-                    <CardMedia>
-                        <img src="./presort.png"/>
-                    </CardMedia>
                     <CardTitle title="Pre Toast" subtitle="PreSort"/>
                     <CardText>
                         Toast is a toaster message showing utility. Helps developer to show toaster messages easly and
