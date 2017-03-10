@@ -63,7 +63,7 @@ export default class App extends Component {
                     Toast.success("this is an success message with a title", "Success");
                     break;
                 case "warning":
-                    Toast.warning("this is an warning message", "Warning", 203000);
+                    Toast.warning("this is an warning message", "Warning", 3000);
                     break;
                 case "error":
                     Toast.error("this is an warning message", "Error", 5000, () => {
@@ -87,7 +87,6 @@ export default class App extends Component {
     };
 
     handleChange = (event, index, value) => {
-        console.log(value)
         this.toastConfiguration("maxVisible", value);
     };
 
