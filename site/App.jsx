@@ -57,16 +57,16 @@ export default class App extends Component {
         return () => {
             switch (type) {
                 case "info":
-                    Toast.info("Info");
+                    Toast.info("info message");
                     break;
                 case "success":
-                    Toast.success("Success", "success message");
+                    Toast.success("success message", "Success");
                     break;
                 case "warning":
-                    Toast.warning("Warning", "warning message", 3000);
+                    Toast.warning("warning message", "Warning", 3000);
                     break;
                 case "error":
-                    Toast.error("Error", "error message", 5000, () => {
+                    Toast.error("error message", "Error", 5000, () => {
                         alert("callback");
                     });
                     break;

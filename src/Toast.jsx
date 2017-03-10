@@ -92,10 +92,13 @@ class Toast extends Component {
                     className={"toast-item toast-item-open " + item.type}
                     style={{zIndex: item.zIndex}}
                     onClick={item.onClick}>
-                    <div
-                        className="toast-item-title"
-                        style={{padding: item.message ? "12px 12px 6px 12px" : "20px"}}>
-                        {item.title}
+                    <div>
+                        <img src={this.__getIcon(item)} width={36} height={36}/>
+                        <div
+                            className="toast-item-title"
+                            style={{padding: item.message ? "12px 12px 6px 12px" : "20px"}}>
+                            {item.title}
+                        </div>
                     </div>
                     <div
                         className="toast-item-content"
@@ -105,7 +108,23 @@ class Toast extends Component {
                 </div>)
         }
         return arr;
-    }
+    };
+
+    __getIcon = (item: Object) => {
+        switch (item.type) {
+            case Constants.INFO:
+                return require('./images/info.png');
+            case Constants.ERROR:
+                return require('./images/error.png');
+            case Constants.SUCCESS:
+                return require('./images/success.png');
+            case Constants.WARNING:
+                return require('./images/warning.png');
+            default:
+                return require('./images/success.png');
+        }
+
+    };
 
     __addQueue = (toast) => {
         if (this.state.listToast.length >= this.props.maxVisible || (this.__queueList[0] && this.__queueList[0].id != toast.id)) {
@@ -120,7 +139,7 @@ class Toast extends Component {
         Arrays.removeByKey(this.__queueList, "id", toast);
         this.__addToast(toast);
 
-    }
+    };
 
     __addToast = (toast) => {
         let list = this.state.listToast.slice(0);
@@ -135,7 +154,7 @@ class Toast extends Component {
         this.setState({
             listToast: list
         }, this.__removeToast.bind(undefined, toast));
-    }
+    };
 
     __removeToast = (toast) => {
         let element = document.getElementById(toast.id);
@@ -160,7 +179,7 @@ class Toast extends Component {
                 this.setState({listToast: arr});
             }, TIMEOUTS.REMOVE);
         }, toast.timeOut);
-    }
+    };
 
     __closeOnClick = (e) => {
         let id = e.target.getAttribute("id");
@@ -173,7 +192,7 @@ class Toast extends Component {
         let arr = this.state.listToast.slice(0);
         Arrays.removeByKey(arr, "id", {id});
         this.setState({listToast: arr});
-    }
+    };
 
     __getTime = () => {
         let d = new Date();
@@ -196,7 +215,7 @@ class Toast extends Component {
             timeOut: timeOut || this.props.timeOut,
             onClick: onClick || this.__closeOnClick
         });
-    }
+    };
 
     /**
      *  Toast.success(message, title, timeOut, callback)
@@ -214,7 +233,7 @@ class Toast extends Component {
             timeOut: timeOut || this.props.timeOut,
             onClick: onClick || this.__closeOnClick
         });
-    }
+    };
 
     /**
      *  Toast.warning(message, title, timeOut, callback)
@@ -232,7 +251,7 @@ class Toast extends Component {
             timeOut: timeOut || this.props.timeOut,
             onClick: onClick || this.__closeOnClick
         });
-    }
+    };
 
     /**
      *  Toast.error(message, title, timeOut, callback)
@@ -250,7 +269,7 @@ class Toast extends Component {
             timeOut: timeOut || this.props.timeOut,
             onClick: onClick || this.__closeOnClick
         });
-    }
+    };
 
     /**
      * Toast.configuration({maxVisible:5,position:"top-right"})
