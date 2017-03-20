@@ -1,6 +1,9 @@
 # CHANGE LOG
 
-## 1.0.3 - Developing...
+## 1.0.4 - Developing...
+
+
+## 1.0.3
 * The width of the toast content has been corrected
 * Fixed bug to close
 
