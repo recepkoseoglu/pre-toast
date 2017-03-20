@@ -93,7 +93,7 @@ class Toast extends Component {
                     style={{zIndex: item.zIndex}}
                     onClick={item.onClick}>
                     <div>
-                        <img src={this.__getIcon(item)} width={36} height={36}/>
+                        <img src={this.__getIcon(item)} width={32} height={32}/>
                         <div
                             className="toast-item-title"
                             style={{padding: item.message ? "12px 12px 6px 12px" : "20px"}}>
@@ -102,7 +102,7 @@ class Toast extends Component {
                     </div>
                     <div
                         className="toast-item-content"
-                        style={{padding: item.title ? "0px 12px 12px 12px" : "20px"}}>
+                        style={{padding: item.title ? "0px 12px 12px 12px" : "17px"}}>
                         {item.message}
                     </div>
                 </div>)
@@ -189,9 +189,11 @@ class Toast extends Component {
             element = e.target.parentNode;
         }
         ClassName.replace(element, "toast-item-open", "toast-item-close");
-        let arr = this.state.listToast.slice(0);
-        Arrays.removeByKey(arr, "id", {id});
-        this.setState({listToast: arr});
+        setTimeout(() => {
+            let arr = this.state.listToast.slice(0);
+            Arrays.removeByKey(arr, "id", {id: parseInt(id)});
+            this.setState({listToast: arr});
+        }, TIMEOUTS.REMOVE);
     };
 
     __getTime = () => {

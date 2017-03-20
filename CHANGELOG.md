@@ -2,6 +2,7 @@
 
 ## 1.0.3 - Developing...
 * The width of the toast content has been corrected
+* Fixed bug to close
 
 ## 1.0.2
 * changed served path config

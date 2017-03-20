@@ -60,13 +60,13 @@ export default class App extends Component {
                     Toast.info("This is an information message without a title");
                     break;
                 case "success":
-                    Toast.success("this is an success message with a title", "Success");
+                    Toast.success("This is an success message with a title", "Success");
                     break;
                 case "warning":
-                    Toast.warning("this is an warning message", "Warning", 3000);
+                    Toast.warning("This is an warning message", "Warning", 3000);
                     break;
                 case "error":
-                    Toast.error("this is an warning message", "Error", 5000, () => {
+                    Toast.error("This is an warning message", "Error", 5000, () => {
                         alert("callback");
                     });
                     break;
