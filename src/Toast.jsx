@@ -46,6 +46,10 @@ class Toast extends Component {
          */
         timeOut: React.PropTypes.number,
         /**
+         *  Animation time bar of Toast
+         */
+        timeBar: React.PropTypes.bool,
+        /**
          *  Function to be called when toast is clicked
          */
         onClick: React.PropTypes.func
@@ -54,6 +58,7 @@ class Toast extends Component {
     static defaultProps = {
         position: "top-right",
         timeOut: TIMEOUTS.SHOW,
+        timeBar: true,
         maxVisible: 5
     };
 
@@ -85,6 +90,7 @@ class Toast extends Component {
         let arr = [];
         for (let index in this.state.listToast) {
             let item = this.state.listToast[index];
+            let displayBar = this.props.timeBar ? "inherit" : "none";
             arr.push(
                 <div
                     key={item.id}
@@ -105,7 +111,8 @@ class Toast extends Component {
                         style={{padding: item.title ? "0px 12px 12px 12px" : "17px"}}>
                         {item.message}
                     </div>
-                    <div className="toast-bar" style={{animation: `toast-bar ${item.timeOut / 1000}s linear`}}></div>
+                    <div className="toast-bar"
+                         style={{animation: `toast-bar ${item.timeOut / 1000}s linear`, display: displayBar}}></div>
                 </div>)
         }
         return arr;

@@ -2,6 +2,7 @@
 
 ## 1.0.4 - Developing...
 * Added toast timeout duration bar
+* Added optional timebar props
 
 
 ## 1.0.3
