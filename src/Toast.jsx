@@ -105,6 +105,7 @@ class Toast extends Component {
                         style={{padding: item.title ? "0px 12px 12px 12px" : "17px"}}>
                         {item.message}
                     </div>
+                    <div className="toast-bar" style={{animation: `toast-bar ${item.timeOut / 1000}s linear`}}></div>
                 </div>)
         }
         return arr;

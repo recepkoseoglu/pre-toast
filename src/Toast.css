@@ -194,3 +194,19 @@
 .toast-item-content:empty {
     display: none;
 }
+
+.toast-bar {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    animation: toast-bar 1s ease;
+}
+
+@keyframes toast-bar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}

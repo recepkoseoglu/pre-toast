@@ -1,6 +1,7 @@
 # CHANGE LOG
 
 ## 1.0.4 - Developing...
+* Added toast timeout duration bar
 
 
 ## 1.0.3
