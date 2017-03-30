@@ -70,12 +70,14 @@ export default Example;
 |------|------|---------|----------|------------ |
 | position | string | "top-right" | false | Desired position of toast to be shown on screen - "top-right" , "top-left" , "bottom-left" , "bottom-right" |
 | maxVisible | number | 5 | false | any number |
+| timeBar | bool | true | false | Toast timeout duration bar |
 
 ```js
 
 let config={
     position:"top-left",
-    maxVisible:5
+    maxVisible:5,
+    timeBar: false
 }
 
 Toast.configuration(conf);
