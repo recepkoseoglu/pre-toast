@@ -1,6 +1,8 @@
 # CHANGE LOG
 
-## 1.0.4 - Developing...
+## 1.0.5 - Developing...
+
+## 1.0.4
 * Added toast timeout duration bar
 * Added optional timebar props
 
