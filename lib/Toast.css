@@ -196,8 +196,9 @@
 }
 
 .toast-bar {
-    height: 4px;
+    height: 2px;
     width: 100%;
+    border-top-right-radius: 20px;
     background-color: white;
     animation: toast-bar 1s ease;
 }
