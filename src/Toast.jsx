@@ -58,7 +58,7 @@ class Toast extends Component {
     static defaultProps = {
         position: "top-right",
         timeOut: TIMEOUTS.SHOW,
-        timeBar: true,
+        timeBar: false,
         maxVisible: 5
     };
 
