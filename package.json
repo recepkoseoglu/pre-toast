@@ -1,6 +1,6 @@
 {
   "name": "pre-toast",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
     "start": "node scripts/start.js",
     "site": "node scripts/site.js",

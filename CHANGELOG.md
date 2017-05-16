@@ -1,7 +1,10 @@
 # CHANGE LOG
 
-## 1.0.5 - Developing...
+## 1.0.6 - Developing...
+
+## 1.0.5
 * changed toast bar design
+* toast bar's default value changed
 
 ## 1.0.4
 * Added toast timeout duration bar
