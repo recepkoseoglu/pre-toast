@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Generator from "./utils/Generator";
 import Arrays from "./utils/Arrays";
 import ClassName from "./utils/ClassName";
+import PropTypes from "prop-types";
 import "./Toast.css";
 
 const TIMEOUTS = {
@@ -28,31 +29,31 @@ class Toast extends Component {
          * Desired position of toast to be shown on screen
          * { "top-right", "top-left", "bottom-right", "bottom-left" }
          */
-        position: React.PropTypes.oneOf(["top-right", "top-left", "bottom-right", "bottom-left"]).isRequired,
+        position: PropTypes.oneOf(["top-right", "top-left", "bottom-right", "bottom-left"]).isRequired,
         /**
          * Maximum available number of visible toasts
          */
-        maxVisible: React.PropTypes.number,
+        maxVisible: PropTypes.number,
         /**
          *  Message to be shown on Toast
          */
-        message: React.PropTypes.string,
+        message: PropTypes.string,
         /**
          *  Message to be shown on Toast
          */
-        title: React.PropTypes.string,
+        title: PropTypes.string,
         /**
          *  Display time of toast
          */
-        timeOut: React.PropTypes.number,
+        timeOut: PropTypes.number,
         /**
          *  Animation time bar of Toast
          */
-        timeBar: React.PropTypes.bool,
+        timeBar: PropTypes.bool,
         /**
          *  Function to be called when toast is clicked
          */
-        onClick: React.PropTypes.func
+        onClick: PropTypes.func
     };
 
     static defaultProps = {
