@@ -1,6 +1,8 @@
 # CHANGE LOG
 
-## 1.0.6 - Developing...
+## 1.0.7 - Developing...
+
+## 1.0.6
 * React.PropTypes replaced by PropTypes
 
 ## 1.0.5
